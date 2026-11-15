@@ -17,6 +17,8 @@ Struktur topologi:
 
 Skema pengalamatan memakai VLSM dari network dasar 10.104.0.0. Tiap LAN mendapat mask sesuai kebutuhan (dari /18 sampai /25), dan link antar-router memakai /30. Rincian perhitungan ada di VLSM_Subnetting.xlsx.
 
+VLSM dipilih karena jumlah host berbeda-beda di setiap jaringan. Dengan ukuran subnet yang disesuaikan kebutuhan, alamat IP dapat digunakan lebih efisien dibandingkan jika semua jaringan memakai subnet berukuran sama. Selain itu, menurut kelompok kami, perhitungan VLSM lebih mudah dipahami dibandingkan dengan CIDR.
+
 | LAN | Subnet | Lokasi |
 |---|---|---|
 | WiFi Utara | 10.104.0.0/18 | R-UTARA |
