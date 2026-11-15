@@ -284,7 +284,7 @@ FTP berjalan di Server-STORAGE-DC sebagai penyimpanan rekaman CCTV (Services, FT
  
 | Item        | Nilai                                                                               |
 | ----------- | ----------------------------------------------------------------------------------- |
-| Akun        | ISI SETELAH DICEK (di file ada akun `k19` dan akun bawaan `cisco`)                  |
+| Akun        | k19 (akun buatan kelompok, izin RWDNL); akun bawaan cisco juga punya izin yang sama              |
 | Izin        | Write, Read, Delete, Rename, List                                                   |
 | Klien       | PC-CCTV-KOTA, lewat `ftp ftp.k13.smartcity.lab` di Command Prompt                   |
 | File uji    | `rekaman_cctv.txt`, dibuat dengan Text Editor di PC-CCTV-KOTA                       |
@@ -437,12 +437,12 @@ Selain uji manual di Packet Tracer, konfigurasi diperiksa dengan skrip otomatis 
 | ------------------------------------ | ---------------------------------------------------------------- | -------------------------------------------------------------------------- |
 | Tunnel aktif                         | R-PUSAT `show interface tunnel 0`                                | Tunnel0 up/up, GRE/IP, source 10.104.241.37, destination 10.104.241.54     |
 | Ping antar ujung tunnel              | R-PUSAT `ping 192.168.13.2`                                      | Success rate 100 persen (5/5)                                              |
-| Ping arah sebaliknya                 | R-PELABUHAN `ping 192.168.13.1`                                  | ISI SETELAH DIUJI                                                          |
+| Ping arah sebaliknya                 | R-PELABUHAN `ping 192.168.13.1`                                  | Success rate 100 persen (5/5)DIUJI                                                          |
 | Route ke tunnel di R-PUSAT           | R-PUSAT `show ip route static`                                   | 10.104.160.0/19 dan 10.104.240.0/25 via 192.168.13.2                       |
 | Route ke tunnel di R-PELABUHAN       | R-PELABUHAN `show ip route static`                               | 10.104.224.0/21 dan 10.104.241.0/27 via 192.168.13.1                       |
 | Jalur Balai Kota ke Pelabuhan        | PC-PEGAWAI-BALAI-KOTA `tracert 10.104.240.11`                    | Hop: 10.104.224.1, 192.168.13.2, 10.104.240.11 (R-UTARA tidak tampak)      |
 | Konektivitas melalui tunnel          | PC-PEGAWAI-BALAI-KOTA `ping 10.104.240.11`                       | Reply 4/4, TTL 126                                                         |
-| Jalur Pelabuhan ke Balai Kota        | PC-KANTOR-PELABUHAN `tracert 10.104.241.2`                       | ISI SETELAH DIUJI (diharapkan melewati 192.168.13.1)                       |
+| Jalur Pelabuhan ke Balai Kota        | PC-KANTOR-PELABUHAN `tracert 10.104.241.2`                       | Hop: 10.104.240.1, 192.168.13.1, 10.104.241.2 (R-UTARA tidak tampak)(diharapkan melewati 192.168.13.1)                       |
 
 Bukti: 
 
