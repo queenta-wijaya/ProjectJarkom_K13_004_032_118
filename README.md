@@ -1,7 +1,7 @@
 # Smart City Surabaya - ETS Jaringan Komputer (Kelompok K-13)
 
 File proyek: `TOPOLOGI K-13.pkt` (Cisco Packet Tracer)
-Network dasar: `10.104.0.0` (K = 13), sesuai perhitungan `VLSM_Subnetting.xlsx`
+Network dasar: `10.104.0.0` (K = 13), sesuai perhitungan `VLSM CIDR_Subnetting.xlsx`
 
 ## 1. Topologi
 
@@ -15,7 +15,7 @@ Struktur topologi:
 - Tiap router daerah melayani 2 LAN lewat satu switch: VLAN 10 untuk perangkat pengguna dan VLAN 20 untuk server. Utara, Barat, Timur, dan Selatan juga punya Access Point untuk HP.
 - Link antar-router diberi label L1 sampai L6 di gambar.
 
-Skema pengalamatan memakai VLSM dari network dasar 10.104.0.0. Tiap LAN mendapat mask sesuai kebutuhan (dari /18 sampai /25), dan link antar-router memakai /30. Rincian perhitungan ada di VLSM_Subnetting.xlsx.
+Skema pengalamatan memakai VLSM dari network dasar 10.104.0.0. Tiap LAN mendapat mask sesuai kebutuhan (dari /18 sampai /25), dan link antar-router memakai /30. Rincian perhitungan ada di VLSM CIDR_Subnetting.xlsx.
 
 VLSM dipilih karena jumlah host berbeda-beda di setiap jaringan. Dengan ukuran subnet yang disesuaikan kebutuhan, alamat IP dapat digunakan lebih efisien dibandingkan jika semua jaringan memakai subnet berukuran sama. Selain itu, menurut kelompok kami, perhitungan VLSM lebih mudah dipahami dibandingkan dengan CIDR.
 
@@ -329,7 +329,7 @@ Keterangan:
 
 Alur pengerjaan:
 
-1. Perhitungan VLSM dari 10.104.0.0 menghasilkan 14 LAN dan 6 link /30 (VLSM_Subnetting.xlsx).
+1. Perhitungan VLSM dari 10.104.0.0 menghasilkan 14 LAN dan 6 link /30 (VLSM CIDR_Subnetting.xlsx).
 2. Pembuatan topologi dan kabel: 8 router, 7 switch, 4 AP, 15 PC/Server/HP.
 3. Pengalamatan interface, pembuatan VLAN 10/20, trunk, router-on-a-stick, dan no shutdown.
 4. Soal 3: static route berjenjang, lalu pengujian dengan show ip route, ping, dan tracert.
