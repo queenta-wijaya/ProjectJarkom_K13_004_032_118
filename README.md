@@ -583,4 +583,4 @@ Balasan dari Pelabuhan diterima di PC-PEGAWAI-BALAI-KOTA:
 ![Balasan](assets/soal-8d-2.png)
 
 ## Link Video Demo Project 
-[Vide Demo ETS Jarkom](https://youtu.be/3xCYkNulFW4)
+[Video Demo ETS Jarkom](https://youtu.be/3xCYkNulFW4)
